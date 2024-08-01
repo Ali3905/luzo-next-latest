@@ -94,7 +94,7 @@ const Form = () => {
                     label={field.label}
                     onChange={(e) => {
                       const file = e.target.files[0];
-                      // onChange(file); // Pass the file to react-hook-form
+                      onChange(file); // Pass the file to react-hook-form
                     }}
                     name={field.name}
                     exampleImage='/1.png'
