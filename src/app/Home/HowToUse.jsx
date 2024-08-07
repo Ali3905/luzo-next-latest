@@ -3,6 +3,8 @@
 import React, { useEffect, useRef } from 'react'
 import { Play, X } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
+// import { Play } from 'lucide-react';
 
 const HowToUse = () => {
     const modalRef = useRef(null)
@@ -36,41 +38,65 @@ const HowToUse = () => {
       }, []);
 
     return (
-        <>
+        <div className='bg-[#ECF4FF]' >
 
-            <div className='sm:mx-[100px] px-[10px] flex justify-center items-center gap-[32px] p-[40px] z-30 '>
-                <div className='flex flex-col text-center  p-[8px] shadow-md rounded-xl text-[32px] font-bold relative max-w-[500px]'>
+            <div className='sm:mx-[100px]  px-[10px] flex justify-center items-center gap-[32px] p-[40px] z-30 '>
+                {/* <div className='flex flex-col text-center  p-[8px] shadow-md rounded-xl text-[32px] font-bold relative max-w-[500px]'>
                     <span className='p-4 bg-white rounded-full shadow absolute top-[40%] left-[40%] cursor-pointer ' onClick={handleOpenModal}>
                         <Play />
                     </span>
-                    <Image src='/img/how-to-use.webp' width={600} height={300} alt='img' className='sm:w-[600px] w-[300px] h-[191px] sm:h-[300px]' />
 
-                </div>
-
+                </div> */}
+               
+    <div className="relative sm:w-[60%] w-[90%] h-[90%] sm:h-[60%]">
+      <Image
+        src='/phone_14_01-removebg-preview.png'
+        width={600}
+        height={300}
+        alt='Phone Frame'
+        className='w-full h-full'
+      />
+      <Link
+        href="https://www.instagram.com/reel/C5lNwi4IAtV/?igsh=dXF3YzV3M2lyOG84"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src='/instagram_thumbnail.jpg'
+          width={600}
+          height={300}
+          alt='Instagram Thumbnail'
+          className='absolute sm:rounded-3xl rounded-xl top-[9%] left-[31%] w-[39%] h-[82%]'
+        />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#81D0F4] rounded-full p-2">
+          <Play className="text-white w-12 h-12" />
+        </div>
+      </Link>
+    </div>
                 <div className='hidden sm:block'>
-                    <p className='text-[32px] font-medium text-[#051036] sm:text-[40px]'>How to use LUZO?</p>
+                    <p className='text-[32px] font-semibold text-[#051036] sm:text-[40px]'>How to use LUZO?</p>
                     <p>Watch the video to know more</p>
                 </div>
 
             </div>
-            <dialog ref={modalRef} className='backdrop:backdrop-blur-sm half-transparent-backdrop z-30 overflow-hidden bg-transparent modal animated'>
+            {/* <dialog ref={modalRef} className='backdrop:backdrop-blur-sm half-transparent-backdrop z-30 overflow-hidden bg-transparent modal animated'>
                 <div className='flex flex-col items-center relative'>
                 <span className='bg-black text-white p-4 rounded-full absolute top-4 cursor-pointer hover:bg-blue-400 z-40' onClick={handlCloseModal}>
                     <X />
                 </span>
-                {/* <Video width="100%" height="65%" controls controlsList='nodownload' autoPlay loop ref={videoRef} >
+                <Video width="100%" height="65%" controls controlsList='nodownload' autoPlay loop ref={videoRef} >
                     <source src='/img/luzo_pay.mp4' type='video/mp4' className=''   />
-                </Video> */}
+                </Video>
                   
                   <video controls loop playsInline className={"sm:w-[35%] h-full mx-auto rounded-md"} ref={videoRef}>
                         <source src='https://www.instagram.com/reel/CwnR-rftgrl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' type='video/mp4' />
                     </video>
 
                 </div>
-            </dialog>
+            </dialog> */}
 
 
-        </>
+        </div>
     )
 }
 

@@ -29,9 +29,9 @@ const WhyUs = () => {
         // },
     ]
     return (
-        <div className='flex flex-col gap-[17px] mx-[15px] my-[30px]'>
-            <h2 className='text-[20px] font-medium leading-8'>Why partner with LUZO?</h2>
-            <p className='text-[16px] text-[#707070] font-normal leading-[19px]'>If you always wander about marketing your salon, LUZO is your one-stop solution!</p>
+        <div className='flex flex-col gap-[17px] mx-[15px] my-[30px]  max-w-[1200px] mx-auto'>
+            <h2 className='text-[20px] sm:text-[30px] font-semibold leading-8'>Why partner with LUZO?</h2>
+            <p className='text-[16px] text-[#707070] font-normal leading-[19px]'>If you always wonder about marketing your business, LUZO is your one-stop solution!</p>
             <div className='flex flex-wrap gap-[5px]'>
                 {
                     benefits.map((ele)=>{

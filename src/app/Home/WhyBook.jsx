@@ -18,7 +18,7 @@ export const WhyBook = () => {
              
              <div>
                <div className='flex gap-[20px] p-5 items-center'> <span className='text-blue'><CircleCheckBig style={{ color: 'blue', width: '50px', height: '50px'  }} /></span><p className='text-[20px]'> No pre payments</p></div>
-               <div className='flex gap-[20px] p-5 items-center'> <span className='text-blue'><CircleCheckBig style={{ color: 'blue', width: '50px', height: '50px'  }} /></span><p className='text-[20px]'> Exclusive offers on salons</p></div>
+               <div className='flex gap-[20px] p-5 items-center'> <span className='text-blue'><CircleCheckBig style={{ color: 'blue', width: '50px', height: '50px'  }} /></span><p className='text-[20px]'> Exclusive offers</p></div>
               
              </div>
           </div>

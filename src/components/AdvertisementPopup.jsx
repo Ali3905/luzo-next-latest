@@ -73,7 +73,7 @@ const AdvertisementPopup = () => {
                 setText("Copy")
             }, 1000);
         }
-        setIsClosed(true)
+        localStorage.setItem("advertisementPopup", false)
         if (isCopied) {
             setText("Copied")
         }
@@ -89,6 +89,13 @@ const AdvertisementPopup = () => {
         }, 1000)
 
     }
+
+    useEffect(()=>{
+        if (localStorage.getItem === null) {
+            localStorage.setItem("advertisementPopup", true)
+        }
+        setIsClosed(localStorage.getItem("advertisementPopup"))
+    }, [])
 
     return (
 

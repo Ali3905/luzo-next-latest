@@ -30,9 +30,9 @@ const Navbar = () => {
                link : "/about"
           },
           {
-               label : "Contact Us",
+               label : "Partner With Us",
                value : "contact",
-               link : "/contact"
+               link : "/partner"
           },
      ]
 

@@ -95,31 +95,31 @@ const PopularSalonsCrousal = () => {
             href: '/salon/jcb',
             imgSrc: '/Logos-Website/13.png'
         },
-        
+
         {
             name: 'Wellness Salon',
             href: '/salon/jcb',
             imgSrc: '/Logos-Website/14.png'
         },
-        
+
         {
             name: 'Lookwell',
             href: '/salon/jcb',
             imgSrc: '/Logos-Website/15.png'
         },
-        
+
         {
             name: 'Cut & Style',
             href: '/salon/jcb',
             imgSrc: '/Logos-Website/16.png'
         },
-        
+
         {
             name: 'Tattva Salon',
             href: '/salon/jcb',
             imgSrc: '/Logos-Website/17.png'
         },
-        
+
         {
             name: 'Kapils salon ',
             href: '/salon/jcb',
@@ -140,8 +140,8 @@ const PopularSalonsCrousal = () => {
             href: '/salon/jcb',
             imgSrc: '/Logos-Website/21.png'
         },
-        
-        
+
+
     ];
 
 
@@ -151,8 +151,8 @@ const PopularSalonsCrousal = () => {
 
             <div className=' px-[10px] my-[60px] relative 2xl:max-w-[1300px] xl:max-w-[1200px] lg:max-w-[1000px] sm:mx-auto'>
                 <div className='flex justify-between mb-[20px]'>
-                    <h1 className='font-bold text-[30px] '>Popular Salons</h1>
-                    <Link href='/all-salons'> <button className='hide_on_large hover:text-[white] text-blue-600 bg-[#3554D10D] px-[10px] py-[10px] hover:bg-[#3554D1] '> <span className='flex gap-[10px]'>View All Salons <ArrowUpRight /> </span>   </button>
+                    <h1 className='font-bold text-[30px] '>Popular Partners</h1>
+                    <Link href='/all-partners'> <button className='hide_on_large hover:text-[white] text-blue-600 bg-[#3554D10D] px-[10px] py-[10px] hover:bg-[#3554D1] '> <span className='flex gap-[10px]'>View All <ArrowUpRight /> </span>   </button>
                     </Link>
                 </div>
                 <Swiper
@@ -171,18 +171,18 @@ const PopularSalonsCrousal = () => {
                     }}
                 >
 
-            {salons.map((salon, index) => (
-                <SwiperSlide key={index}>
-                    <Link href={salon.href}>
-                    <div className='relative flex flex-col gap-[20px] rounded-xl overflow-hidden'>
-                        <Image src={salon.imgSrc} width={360} height={172} alt='salon' className='aspect-video transform hover:scale-110 transition duration-300 ease-in-out' />
-                        {/* <div className='absolute inset-0 bg-[#2D1010] opacity-15'></div> */}
-                        <h1 className='text-[#444444] text-[30px] font-medium absolute bottom-0 left-0 px-4 py-2'>{salon.name}</h1>
-                    </div>
-                    </Link>
-                </SwiperSlide>
-            ))}
-                    
+                    {salons.map((salon, index) => (
+                        <SwiperSlide key={index}>
+                            <Link href={salon.href}>
+                                <div className='relative flex flex-col gap-[20px] rounded-xl overflow-hidden'>
+                                    <Image src={salon.imgSrc} width={360} height={172} alt='salon' className='aspect-video transform hover:scale-110 transition duration-300 ease-in-out' />
+                                    {/* <div className='absolute inset-0 bg-[#2D1010] opacity-15'></div> */}
+                                    <h1 className='text-[#444444] text-[30px] font-medium absolute bottom-0 left-0 px-4 py-2'>{salon.name}</h1>
+                                </div>
+                            </Link>
+                        </SwiperSlide>
+                    ))}
+
                     {/* <SwiperSlide>
                         <Link href='/salon/jcb'>
                             <div className='flex flex-col gap-[20px] rounded-xl overflow-hidden'>
@@ -358,8 +358,11 @@ const PopularSalonsCrousal = () => {
                 <div className="custom-pagination">
                     {renderPagination()}
                 </div>
-                <Link href='/all-salons'> <button className='hide_on_small hover:text-[white] text-blue-600 bg-[#3554D10D] px-[10px] py-[10px] hover:bg-[#3554D1]'> <span className='flex gap-[10px]'>View All Salons <ArrowUpRight /> </span>   </button>
-                    </Link>
+                <Link href='/all-partners'>
+                    <button className='hide_on_small hover:text-[white] text-blue-600 bg-[#3554D10D] px-[10px] py-[10px] hover:bg-[#3554D1]'>
+                        <span className='flex gap-[10px]'>View All Salons <ArrowUpRight /> </span>
+                    </button>
+                </Link>
             </div>
 
         </>

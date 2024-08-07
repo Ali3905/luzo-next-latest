@@ -9,7 +9,9 @@ const Footer = () => {
         <ul className="flex flex-col gap-[20px]">
           <h1 className="text-[16px] font-semibold ">Pages</h1>
           <Link href='/about'> <li>About Us</li></Link>
-          <Link href='/contact'> <li>Get In Touch</li></Link>
+          <Link href='/partner'> <li>Partner With Us</li></Link>
+          <Link href='/influencer'> <li>Influencer Program</li></Link>
+          {/* <Link href='/contact'> <li>Get In Touch</li></Link> */}
           <Link href='/privacy'><li>Privacy Policy</li></Link>
           <Link href='/terms'><li>Terms of Service</li></Link>
         </ul>
@@ -18,10 +20,11 @@ const Footer = () => {
           <Link target="_blank" href='https://www.instagram.com/luzo.app?igshid=YmMyMTA2M2Y%3D'>
             <li className="flex items-center gap-[10px]"><Image src="/img/instagram.svg" width='25' height='21'  alt="instagram" />Instagram</li>
           </Link>
+
           <Link target="_blank" href='https://www.linkedin.com/company/salonsurf/posts/?feedView=all'>
             <li className="flex items-center gap-[10px]"><Image src="/img/linkedin.svg" width='25' height='21' alt="instagram" />LinkedIn</li>
-
           </Link>
+
           <Link target="_blank" href='https://www.facebook.com/luzoapp/'>
             <li className="flex items-center gap-[10px]"><Image src="/img/facebook.svg" width='25' height='21' alt="instagram" />Facebook</li>
 

@@ -10,8 +10,8 @@ const Discount = () => {
             image: "/img/3.svg"
         },
         {
-            title: "Visit the salon",
-            description: "Visit the salon to avail all the services you want",
+            title: "Visit for your service",
+            description: "Go for your appointment to avail all the services you want",
             image: "/img/1.svg"
         },
         {
@@ -40,7 +40,7 @@ const Discount = () => {
                                 </span>
                                 <Image src={step.image} alt="sdf" width={140} height={140} className="w-[140px] h-[140px] hidden sm:block" />
                                 <span className="flex flex-col">
-                                    <h1 className="text-[18px] sm:text-center font-medium sm:py-[10px]">{step.title}</h1>
+                                    <h1 className="text-[18px] sm:text-center font-semibold sm:py-[10px]">{step.title}</h1>
                                     <p className="text-[15px] sm:text-center ">{step.description}</p>
                                 </span>
                             </div>

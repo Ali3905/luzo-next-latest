@@ -6,7 +6,8 @@ import TestimonialCrousal from './TestimonialCrousal'
 import Form from './Form'
 import AboutLuzo from './AboutLuzo'
 import Footer from '@/components/Footer'
-import SalonCrousal from '../Home/SalonCrousal'
+import Carousel from './Carousel'
+// import SalonCrousal from '../Home/SalonCrousal'
 
 const index = () => {
   return (
@@ -15,8 +16,10 @@ const index = () => {
         <Header />
         <WhyUs />
         <AboutLuzo/>
-        <SalonCrousal/>
+        {/* <SalonCrousal/> */}
+        <Carousel/>
         <TestimonialCrousal />
+
         <Form />
         <Footer/>
     </div>

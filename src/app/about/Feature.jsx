@@ -6,7 +6,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-
 import Image from 'next/image';
 
 const Feature = () => {
@@ -33,18 +32,18 @@ const Feature = () => {
     },
     {
       img: '/aboutBanner6.png',
-      heading: '5.Enjoy in  different cities',
+      heading: '5.Enjoy in different cities',
       para: 'Get services done at different cities',
     },
     {
       img: '/aboutBanner7.png',
-      heading: '5.Enjoy in  different cities',
+      heading: '5.Enjoy in different cities',
       para: 'Get services done at different cities',
     },
   ];
 
   return (
-    <div className='px-[10px] sm:px-[100px]'>
+    <div className='px-[10px] sm:px-[100px] relative max-w-[1400px] mx-auto'>
       <h1 className='text-[30px] font-bold leading-[39px] my-[30px]'>Our Features</h1>
       <Swiper
         slidesPerView={1}
@@ -57,33 +56,34 @@ const Feature = () => {
           bulletClass: "pagination-item",
           bulletActiveClass: "pagination-active-item"
         }}
-        modules={[Navigation, Pagination]}
+        autoplay={{
+          delay: 3000, // 3 seconds
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Pagination, Autoplay]}
         breakpoints={{
           640: {
             slidesPerView: 4,
           },
         }}
       >
+        {features.map((feature, index) => (
+          <SwiperSlide key={index}>
+            <div className='flex flex-col items-center mb-4'>
+              <Image src={feature.img} alt={feature.heading} width={80} height={163} className='h-[500px] rounded-2xl shadow-md w-[250px]' />
+              <h1 className='text-[14px] sm:text-[18px] text-center py-[10px] font-medium'>{feature.heading}</h1>
+              <p className='text-[12px] sm:text-[14px] text-center'>{feature.para}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-{features.map((feature, index) => (
-  <SwiperSlide key={index}>
-    <div className='flex flex-col items-center mb-4'>
-      <Image src={feature.img} alt={feature.heading} width={80} height={163} className='h-[500px] rounded-2xl shadow-md w-[250px]' />
-      <h1 className='text-[14px] sm:text-[18px] text-center py-[10px] font-medium'>{feature.heading}</h1>
-      <p className='text-[12px] sm:text-[14px] text-center'>{feature.para}</p>
-    </div>
-  </SwiperSlide>
-))}
-</Swiper>
-
-
-  <button className='popular_prev p-2 sm:block shadow-md rounded-full absolute left-0 sm:left-[40%]  transform -translate-y-1/2 text-white bg-blue-500'>
-    <ChevronLeft />
-  </button>
-  <button className='popular_next p-2 sm:block shadow-md rounded-full absolute right-0 sm:right-[40%]  transform -translate-y-1/2  text-white bg-blue-500'>
-    <ChevronRight />
-  </button>
-
+      <button className='popular_prev p-2 sm:block shadow-md rounded-full absolute left-[4%] top-1/2 transform -translate-y-1/2 text-white bg-blue-500'>
+        <ChevronLeft />
+      </button>
+      <button className='popular_next p-2 sm:block shadow-md rounded-full absolute right-[4%] top-1/2 transform -translate-y-1/2 text-white bg-blue-500'>
+        <ChevronRight />
+      </button>
     </div>
   );
 };
