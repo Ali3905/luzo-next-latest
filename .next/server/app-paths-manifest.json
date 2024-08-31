@@ -1,0 +1,17 @@
+{
+  "/401/page": "app/401/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/loading/page": "app/loading/page.js",
+  "/page": "app/page.js",
+  "/partner/page": "app/partner/page.js",
+  "/influencer/page": "app/influencer/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/career/page": "app/career/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/salon/[salonName]/page": "app/salon/[salonName]/page.js",
+  "/about/page": "app/about/page.js",
+  "/all-partners/page": "app/all-partners/page.js",
+  "/giftcard/page": "app/giftcard/page.js",
+  "/contact/page": "app/contact/page.js"
+}
